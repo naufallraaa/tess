@@ -1,0 +1,213 @@
+/* Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* Color scheme */
+  --primary-color: #f6c700; /* Kuning cerah */
+  --primary-hover-color: #d4af37; /* Kuning lebih gelap */
+  --primary-shadow-color: rgba(246, 199, 0, 0.3);
+
+  --secondary-color: #ffe066; /* Kuning lembut */
+  --secondary-hover-color: #ffd633;
+
+  --accent-color: #fff9e6; /* Kuning sangat lembut */
+  --accent-hover-color: #fff4cc;
+
+  --danger-color: #ff6b6b;
+  --danger-hover-color: #ff4d4d;
+
+  --background-color: #fff7cc; /* Latar belakang kuning pucat */
+  --card-background: #ffffff;
+  --text-color: #2d3436; /* Warna teks gelap */
+  --text-muted: #636e72; /* Teks abu-abu */
+  --border-color: #e2e8f0;
+
+  --font-family: "Poppins", sans-serif;
+}
+
+body {
+  font-family: var(--font-family);
+  background: linear-gradient(135deg, var(--background-color), var(--accent-color));
+  color: var(--text-color);
+  line-height: 1.7;
+  overflow-x: hidden;
+}
+
+.container {
+  padding-inline: 24px;
+  margin-inline: auto;
+  max-width: 1200px;
+  width: 100%;
+}
+
+/* Links and Buttons */
+a,
+button {
+  min-height: 44px;
+  min-width: 44px;
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+a:hover {
+  color: var(--primary-hover-color);
+}
+
+button {
+  font-family: var(--font-family);
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 24px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: var(--primary-hover-color);
+  transform: translateY(-2px);
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+button[disabled] {
+  background-color: #ffe6a5; /* Kuning redup */
+  color: #b2bec3;
+  cursor: not-allowed;
+}
+
+/* Inputs and Selects */
+input,
+textarea,
+select {
+  transition: all 0.3s ease;
+  font-family: var(--font-family);
+}
+
+input,
+textarea {
+  min-height: 44px;
+  min-width: 44px;
+  width: 100%;
+  padding: 12px 16px;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  font-size: 1rem;
+  resize: vertical;
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+input:focus,
+textarea:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 4px var(--primary-shadow-color);
+  outline: none;
+}
+
+textarea {
+  min-height: 150px;
+}
+
+select {
+  display: inline-block;
+  border-radius: 8px;
+  padding: 12px 16px;
+  font-size: 1rem;
+  line-height: 1.5;
+  border: 1px solid var(--border-color);
+  background-color: #ffffff;
+  min-height: 44px;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  min-height: auto;
+  min-width: auto;
+  width: auto;
+  display: inline;
+}
+
+/* Main Content */
+.main-content {
+  min-height: calc(100vh - 80px);
+}
+
+/* Section Titles */
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--primary-color);
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+.section-subtitle {
+  font-size: 1.125rem;
+  color: var(--text-muted);
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+/* Cards */
+.card {
+  background-color: var(--card-background);
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  padding: 24px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Animations */
+.fade-in {
+  animation: fade-in 0.5s ease forwards;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Skip Link */
+.skip-link {
+  position: absolute;
+  left: 0;
+  top: -100px;
+  width: 100%;
+  padding: 16px;
+  background-color: var(--primary-color);
+  color: white;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: bold;
+  z-index: 1000;
+  text-decoration: none;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: top 0.3s ease;
+}
+
+.skip-link:focus {
+  top: 0;
+  outline: none;
+  box-shadow: 0 0 0 3px white, 0 0 0 6px var(--primary-hover-color);
+}

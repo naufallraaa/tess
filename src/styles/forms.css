@@ -1,0 +1,116 @@
+/* Form styles - Yellow/Gold Theme */
+form > .form-control:not([hidden]) ~ .form-control:not([hidden]) {
+  margin-block-start: 24px;
+}
+
+form .form-control > :not([hidden]) ~ :not([hidden]) {
+  margin-block-start: 8px;
+}
+
+.form-label {
+  font-weight: 700; /* Bold for emphasis */
+  display: block;
+  margin-bottom: 8px;
+  color: var(--primary-color); /* Bright yellow */
+  font-size: 0.9rem;
+}
+
+.form-help {
+  font-size: 0.85rem;
+  color: var(--primary-hover-color); /* Muted yellow/gold */
+  margin-top: 4px;
+}
+
+.input-group {
+  position: relative;
+}
+
+.input-icon {
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--primary-hover-color); /* Muted yellow/gold */
+}
+
+.input-group input {
+  padding-left: 48px;
+  border: 1px solid var(--primary-color); /* Bright yellow border */
+  border-radius: 8px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.input-group input:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 4px var(--primary-color);
+}
+
+form .form-buttons {
+  margin-block-start: 32px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+button {
+  font-weight: 600;
+  border-radius: 8px;
+  padding: 12px 24px;
+  background-color: var(--primary-color); /* Bright yellow */
+  color: #ffffff;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: var(--primary-hover-color); /* Deeper yellow on hover */
+  transform: translateY(-2px);
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+button[disabled] {
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+button.auth-submit-btn {
+  width: 100%;
+}
+
+.auth-alternate-action {
+  text-align: center;
+  color: var(--primary-hover-color); /* Muted yellow/gold */
+  font-size: 0.875rem;
+  margin-top: 16px;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.auth-alternate-action:hover {
+  color: var(--primary-color); /* Bright yellow on hover */
+}
+
+/* Background */
+.auth-container {
+  min-height: calc(100vh - 80px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 48px 24px;
+  background: linear-gradient(135deg, var(--background-color), var(--primary-color)); /* Yellow gradient */
+  animation: background-animation 6s infinite alternate;
+}
+
+/* Gradient Animation */
+@keyframes background-animation {
+  0% {
+    background: linear-gradient(135deg, var(--background-color), var(--primary-color));
+  }
+  100% {
+    background: linear-gradient(135deg, var(--primary-color), var(--background-color));
+  }
+}

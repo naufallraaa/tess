@@ -1,0 +1,45 @@
+/* Bookmark page styles - Yellow/Gold Theme */
+.bookmark-container {
+  padding: 64px;
+  background-color: #FFF9E3; /* Soft pale yellow */
+}
+
+.bookmark-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 400px;
+}
+
+.bookmark-message {
+  text-align: center;
+  padding: 48px;
+  background-color: #FFFBEA; /* Lighter yellow for card */
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(255, 193, 7, 0.10); /* Subtle gold shadow */
+  max-width: 600px;
+}
+
+.bookmark-icon {
+  font-size: 3rem;
+  color: #FFC107; /* Vibrant gold */
+  margin-bottom: 24px;
+}
+
+.bookmark-message h2 {
+  color: #B28704; /* Deep golden brown */
+  margin-bottom: 16px;
+}
+
+.bookmark-message p {
+  margin-bottom: 24px;
+  color: #D4AC0D; /* Muted gold */
+}
+
+/* Optional: variables for consistency */
+:root {
+  --accent-color: #FFF9E3;
+  --primary-color: #FFC107;
+  --text-color: #B28704;
+  --text-muted: #D4AC0D;
+}
